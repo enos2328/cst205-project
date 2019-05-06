@@ -1,0 +1,94 @@
+/* Fixed navbar */
+body {
+    padding-top: 90px;
+}
+
+/* General sizing */
+ul.dropdown-lr {
+  width: 300px;
+}
+
+#homepage-img {
+  filter: brightness(70%);
+}
+
+#services {
+  margin-top:35em;
+}
+
+.service-heading {
+  color: #D5D5D5;
+}
+
+.service-text {
+  color: #D5D5D5;
+}
+
+span.homepage.glyphicon-search {
+  font-size: 2em;
+  color: #D5D5D5;
+}
+
+span.homepage.glyphicon-shopping-cart {
+  font-size: 2em;
+  color: #D5D5D5;
+}
+
+span.homepage.glyphicon-heart {
+  font-size: 2em;
+  color: #D5D5D5;
+}
+
+/* mobile fix */
+@media (max-width: 768px) {
+    .dropdown-lr {
+        color: #eee;
+    }
+    .dropdown-lr label {
+        color: #eee;
+    }
+}
+
+.alert {
+   width:70%;
+   margin: 0 auto;    
+}
+
+.img-rounded {
+    width:70%;
+}
+
+.buttonload {
+  border-radius: 24px;
+}
+
+#text-title {
+  z-index: 100;
+  position: absolute;
+  color: #F8EEE7;
+  font-size: 70px;
+  font-family: 'Kaushan Script', cursive;
+  left: 150px;
+  top: 150px;
+}
+
+#text-caption {
+  z-index: 100;
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  left: 150px;
+  top: 250px;
+}
+
+.carousel-image {
+  margin: auto;
+}
+
+.buttonload {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px /* Set a font size */
+}

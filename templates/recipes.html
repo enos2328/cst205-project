@@ -1,0 +1,27 @@
+<!-- reipies.html -->
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+  Recipes
+{% endblock %}
+
+{% block content %}
+<div class="container">
+
+  <h1>Recipes <br><small>Here is the recipes that best fits what you have</small></h1>
+
+  {% if data %}
+    {% for recipe in data %} <!-- getting all 'keys' from the json object -->
+      <br>
+      <a href="/recipes/{{recipe['id']}}"><h3>{{recipe['title']}}</h3> <!-- getting the 'value' of the 'key' 'title' from the json object -->
+      <div><img src="{{recipe['image']}}" alt="" width="300"  class="img-rounded"></div>
+      <div><small>this recipe has {{recipe['likes']}} likes</small></div>
+      <p>{{recipe['usedIngredients']['originalName']}}</p></a>
+      <br><br>
+    {% endfor %}
+  {% else %}
+    no data
+  {% endif %}
+
+</div>
+{% endblock %}

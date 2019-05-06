@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %} Homepage {% endblock %}
+
+{% block content %}
+
+<div class="container homepage-background">
+  <div id='homepage-img' style='position:absolute;z-index:0;left:0;top:0;width:100%;height:100%'>
+    <img src='/static/img/homepage-img.jpg' style='width:100%;height:100%'>
+  </div>
+    <p id="text-title">
+    Aislander
+    </p>
+    <p id="text-caption">
+    Grocery lists made easy. <br>
+    Skip the grocery store scavenger hunt. <br>
+    </p>
+</div>
+
+ <section id="services">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <h4 class="service-heading">Search Recipes</h4>
+            <span class="homepage glyphicon glyphicon-search"></span>
+            <p class="text-muted service-text">Access over 365,000 recipes online for your meal prepping journey.</p>
+          </div>
+          <div class="col-md-4">
+            <h4 class="service-heading">Make A Grocery List</h4>
+            <span class="homepage glyphicon glyphicon-shopping-cart"></span>
+            <p class="text-muted service-text">Append a chosen recipe's ingredients to your grocery list with a single click. Those ingredients will be organized by aisle category.</p>
+          </div>
+          <div class="col-md-4">
+            <h4 class="service-heading">Bookmark Recipes</h4>
+            <span class="homepage glyphicon glyphicon-heart"></span>
+            <p class="text-muted service-text">Like a recipe? This app allows you to bookmark recipes, to be accessed in your user profile page.</p>
+          </div>
+        </div>
+      </div>
+</section>
+
+{% endblock %}
