@@ -1,0 +1,155 @@
+
+@font-face {
+	font-family: UnicornPoop;
+	src: url(vtks_sabonete.ttf);
+}
+
+@font-face {
+	font-family: Turtle;
+	src: url(vtks-giz.ttf);
+}
+
+@font-face {
+	font-family: Yoshi;
+	src: url(adler.ttf);
+}
+
+#name {
+	font-family: UnicornPoop;
+	font-size: 70px;
+	margin-top: 2%;
+	color: #b30000;
+	text-shadow: 3px 3px black;
+	margin-left: -3%;
+}
+
+body {
+	margin-left: 5%;
+	background-image: linear-gradient(to top, 
+		#ffffff, #ffffff, #ffffff, #404040);
+	font-family: Yoshi;
+	font-size: 16px;
+}
+
+#title {
+	color: #b30000;
+}
+
+/* Navigation Bar */
+.in {
+	left: 5%;
+}
+
+.porter {
+	left: 12%;
+}
+
+.exp {
+	left: 24%;
+}
+
+div #l1{
+	font-family: Turtle;
+	font-size: 25px;
+	padding-left: 5px;
+	padding-right: 10px;
+	border-radius: 90px 1px;
+	background-color: #990000;
+}
+
+#topnav ul {
+	list-style: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	margin-left: -3%;
+}
+
+#topnav li {
+	position: absolute;
+	margin-top: 5%;
+}
+
+#topnav li a {
+	display: block;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	padding: 6px 16px;
+}
+#topnav a:hover{
+	background-color: black;
+	margin: 5px 5px;
+	color: white;
+	border-radius: 90px 1px;
+}
+
+/* Portfolio Page */
+.port {
+	padding-top: 6%;
+	padding-bottom: 2%;
+}
+
+/* Portfolio Works */
+div .l2{
+	font-family: Turtle;
+	font-size: 25px;
+	padding-left: 5px;
+	padding-right: 10px;
+}
+
+#links ul {
+	list-style: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	margin-left: -3%;
+	padding-bottom: 10%;
+}
+
+#links li a {
+	display: block;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	padding: 6px 16px;
+}
+#links a:hover{
+	background-color: #900000;
+	color: white;
+	font-size: 32px;
+	margin: 5px 5px;
+	border-radius: 90px 1px;
+}
+
+/* Swirl Pics */
+.swirll {
+	height: 20px;
+	width: auto;
+	transform: rotate(180deg);
+	filter: invert(100%);
+}
+
+.swirlr {
+	height: 20px;
+	width: auto;
+	filter: invert(100%);
+}
+
+/* Bio Page */
+#indexbody {
+	padding-top: 6%;
+	padding-bottom: 15%;
+}
+
+#koala {
+	float: right;
+}
+
+/* Expertise Page */
+#expobody {
+	padding-top: 6%;
+	padding-bottom: 10%;
+}

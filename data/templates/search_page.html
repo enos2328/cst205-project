@@ -1,0 +1,57 @@
+<!--
+Athena Enosara
+Partners: Andrew Marmolejo, Magnus Harboe, Andrew M., Guadalupe
+Due Date: May 13, 2019
+Final Project 
+
+Description: This is the html code of the assigment that shows up on the first page of the webpage.
+-->
+{% extends 'bootstrap/base.html' %}
+{% block title %}
+  Homework 4: Flask - Home Page
+{% endblock %}
+
+{% block content %}
+<div class = "container, ">
+    <!-- HEADER -->
+    <h1>PICTURES</h1>
+
+    <!-- PRINTS THE TITLES AND IMAGES -->
+		{% for x in range(3) %}
+
+	<!-- CHANGES IMAGE, FILE, AND TITLE -->			
+		<!–– IF x == 0, DO THIS ––>
+			{% if x == 0 %}
+				{% set current_img = img1 %}		<!–– sets the current image to img1 ––>
+				{% set current_file = file1 %}		<!–– sets the current file to file1 ––>
+				{% set current_title = title1 %}	<!–– sets the current title to title1 ––>
+
+			<!–– IF x == 1, DO THIS ––>
+			{% elif x == 1 %}
+				{% set current_img = img2 %}		<!–– sets the current image to img2 ––>
+				{% set current_file = file2 %}		<!–– sets the current file to file1 ––>
+				{% set current_title = title2 %}	<!–– sets the current title to title2 ––>
+
+			<!–– IF x == 2, DO THIS ––>
+			{% else %}
+				{% set current_img = img3 %}		<!–– sets the current image to img3 ––>
+				{% set current_file = file3 %}		<!–– sets the current file to file3 ––>
+				{% set current_title = title3 %}	<!–– sets the current title to title3 ––>
+			{% endif %}
+		<br>
+
+	<!-- MAKES THE TITLE+IMAGE INTO A LINK -->
+		<a href="{{ url_for('picture', img_id = current_img) }}">
+
+		<!-- PRINTS THE CURRENT TITLE IN THE h4 HEADER -->
+			<h4>
+				{% print(current_title) %}
+			</h4>
+
+		<!-- IMAGE -->
+			<img src = "{{url_for('static', filename = current_file)}}" width = 160 class = "img-responsive img-rounded" alt = "">
+		</a>
+		{% endfor %}
+    
+    </div>
+{% endblock %}  
