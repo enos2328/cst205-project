@@ -19,6 +19,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'csumb-otter'    #   USED FOR FORMS
 bootstrap = Bootstrap(app)
 
+
 #ingredients = ['chiCken', 'rice']
 #rank = 2
 
@@ -152,6 +153,33 @@ def addrecipe():
 #   PAGE TO SEE YOUR RESULTS
 @app.route('/recipes')
 def main():
+=======
+
+@app.route('/home')
+def main():
+    return render_template('index.html')
+
+
+@app.route('/recipes')
+def recipes():
+    ingredients = ['chicken', 'rice']
+    rank = 2
+    payload = {
+        'fillIngredients': False,
+        'ingredients': ingredients,
+        'limitLicense': False,
+        'number': 5,
+        'ranking': rank
+    }
+
+    api_key = "4889bc9e24mshb28791c820806bep1256c2jsn921e1c55af76"
+
+    endpoint = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients"
+
+    headers = {
+        "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+        "X-RapidAPI-Key": api_key
+    }
     try:
         r = requests.get(endpoint, params=payload, headers=headers)
         data = r.json()
@@ -173,11 +201,11 @@ def recipe(recipe_id):
     }
     try:
         r = requests.get(endpoint, params=payload, headers=headers)
-        data2 = r.json()
+        data = r.json()
     except:
         print('please try again')
-    return render_template('recipes_info.html', data=data2)  # redering the html template and also passing the information it gathered from the API
+    return render_template('recipes_info.html', data=data)  # redering the html template and also passing the information it gathered from the API
 
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
