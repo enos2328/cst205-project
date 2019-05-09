@@ -1,27 +1,79 @@
-<!-- reipies.html -->
+<!-- recipes.html -->
 {% extends 'bootstrap/base.html' %}
 
 {% block title %}
-  Recipes
+    Hungy - Recipes
 {% endblock %}
 
 {% block content %}
-<div class="container">
-
-  <h1>Recipes <br><small>Here is the recipes that best fits what you have</small></h1>
-
-  {% if data %}
-    {% for recipe in data %} <!-- getting all 'keys' from the json object -->
-      <br>
-      <a href="/recipes/{{recipe['id']}}"><h3>{{recipe['title']}}</h3> <!-- getting the 'value' of the 'key' 'title' from the json object -->
-      <div><img src="{{recipe['image']}}" alt="" width="300"  class="img-rounded"></div>
-      <div><small>this recipe has {{recipe['likes']}} likes</small></div>
-      <p>{{recipe['usedIngredients']['originalName']}}</p></a>
-      <br><br>
-    {% endfor %}
-  {% else %}
-    no data
-  {% endif %}
-
-</div>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hungy - Add Recipe</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!-------Header Section---------->
+        <header>
+            <!--Navigation bar-->
+            <div class="nav-bar">
+                <nav class="navbar navbar-expand-lg">
+                <!-----MANGLER LOGO--->
+                  <a class="navbar-brand" href="#"></a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <i class="fa fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                      <ul class="navbar-nav ml-auto">
+                          <li class="nav-item">
+                            <a class="nav-link" href="/home">HOME </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/search">SEARCH</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/addrecipe">ADD A RECIPES</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/login">LOGIN/CREATE ACCOUNT</a>
+                          </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/login">YOUR RECIPES</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#skills">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#contact">CONTACT</a>
+                            </li>
+                        </ul>
+                  </div>
+                </nav>
+            </div>
+        </header>
+        <div class="container">
+            <h1>Recipes <br><small>Here are the recipes that best fits what you have</small></h1>
+            <!-- PRINTS FIVE SEARCH RESULT ITEMS -->
+            {% if data %}
+                {% for recipe in data %} <!-- getting all 'keys' from the json object -->
+                    <br>
+                    <a href="/recipes/{{recipe['id']}}"><h3>{{recipe['title']}}</h3> <!-- getting the 'value' of the 'key' 'title' from the json object -->
+                        <div><img src="{{recipe['image']}}" alt="" width="300" class="img-rounded"></div>
+                        <div><small>this recipe has {{recipe['likes']}} likes</small></div>
+                        <p>{{recipe['usedIngredients']['originalName']}}</p>
+                    </a>
+                    <br><br>
+                {% endfor %}
+            {% else %}
+                no data
+            {% endif %}
+        </div>
+    </body>
+</html>
 {% endblock %}
