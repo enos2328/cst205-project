@@ -1,71 +1,54 @@
-<!-- index.html -->
-{% extends 'bootstrap/base.html' %}
-{% block title %}
-	HUNGY
-{% endblock %}
-
-{% block content %}
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Home</title>
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	</head>
-	<body>
-	<!-------Header Section---------->
-		<header>
-			<!--Navigation bar-->
-			<div class="nav-bar">
-				<nav class="navbar navbar-expand-lg">
-				<!-----MANGLER LOGO--->
-					<a class="navbar-brand" href="#"></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-							<i class="fa fa-bars"></i>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarNav">
-						<ul class="navbar-nav ml-auto">
-							<li class="nav-item">
-								<a class="nav-link" href="/home">HOME </a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/search">SEARCH</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/addrecipe">ADD A RECIPES</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/login">LOGIN/CREATE ACCOUNT</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/login">YOUR RECIPES</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#skills">FAQ</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#contact">CONTACT</a>
-							</li>
-						</ul>
-					</div>
-				</nav>
-			</div>
-			<!-- WELCOME MESSAGE -->
-			<div class="container welcome">
-	            <h1>HUNGY?</h1>
-				<a href="/search" class="btn btn1"><i class="fa fa-search"></i> Search</a>
-	            <a href="a" class="btn btn2">Contact</a>
-	        </div>
-		</header>
-		<!-------TRUE FALSE IF ACCOUNT CREATED OR NOT---------->
-		{% if account_created == True%}
-			<h1>Account Was Created!</h1>
-		{% endif %}
+		<head>
+				<meta charset="utf-8">
+				<title>Home</title>
+				<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+				<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+				<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+				<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+				<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		</head>
+		<body>
+		<!-------Header Section---------->
+				<header>
+						<!--Navigation bar-->
+						<div class="nav-bar">
+								<nav class="navbar navbar-expand-lg">
+								<!-----MANGLER LOGO--->
+										<a class="navbar-brand" href="#"></a>
+										<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+												<i class="fa fa-bars"></i>
+										</button>
+										<div class="collapse navbar-collapse" id="navbarNav">
+												<ul class="navbar-nav ml-auto">
+														<li class="nav-item">
+														<a class="nav-link" href="/">HOME </a>
+														</li>
+														<li class="nav-item">
+														<a class="nav-link" href="/recipes/2/2">SEARCH</a>
+														</li>
+														<li class="nav-item">
+														<a class="nav-link" href="/add">ADD</a>
+														</li>
+														<li class="nav-item">
+														<a class="nav-link" href="/faq">FAQ</a>
+														</li>
+														<li class="nav-item">
+														<a class="nav-link" href="/contact">CONTACT</a>
+														</li>
+												</ul>
+										</div>
+								</nav>
+						</div>
+						<div class="container welcome">
+				            <h1>HUNGY?</h1>
+							<a href="/recipes/2/2" class="btn btn1"><i class="fa fa-search"></i> Search</a>
+				            <a href="/contact" class="btn btn2">Contact</a>
+				        </div>
+				</header>
 	</body>
 </html>
-{% endblock %}
+
