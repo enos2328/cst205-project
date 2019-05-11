@@ -75,7 +75,7 @@ def recipe(recipe_id):
 ########################
 ## FAQ + CONTACT PAGE ##
 ########################
-@app.route('/faq_page')
+@app.route('/faq')
 def faq_page():
     return render_template('faq.html')
 
