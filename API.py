@@ -91,7 +91,7 @@ def contact():
 ##################
 @app.route('/search')
 def search():
-    return redner_template('search.html')
+    return render_template('search.html')
 
 
 if __name__ == '__main__':
