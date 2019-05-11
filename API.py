@@ -40,7 +40,6 @@ headers = {
 ############################
 @app.route('/')
 def main_page():
-    
     return render_template('index.html')
 
 
@@ -79,6 +78,14 @@ def recipe(recipe_id):
 @app.route('/faq_page')
 def faq_page():
     return render_template('search.html')
+
+##################
+## CONTACT PAGE ##
+##################
+@app.route('/contact')
+def contact():
+     return render_template('contact.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
