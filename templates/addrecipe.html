@@ -1,16 +1,15 @@
-<!-- search.html -->
+<!-- addrecipe.html -->
 {% extends 'bootstrap/base.html' %}
 {% block title %}
-	Hungy - Search
+	Hungy - Add Recipe
 {% endblock %}
 
 {% block content %}
 <!DOCTYPE html>
 <html>
-
-    <head>
+  	<head>
         <meta charset="utf-8">
-        <title>Home</title>
+        <title>Hungy - Add Recipe</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -20,10 +19,10 @@
   	</head>
   	<body>
     	<!-------Header Section---------->
-        <header>
+      	<header>
           	<!--Navigation bar-->
-	        <div class="nav-bar">
-	            <nav class="navbar navbar-expand-lg">
+        	<div class="nav-bar">
+            	<nav class="navbar navbar-expand-lg">
               		<!-----MANGLER LOGO--->
                 	<a class="navbar-brand" href="#"></a>
                 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,17 +31,17 @@
                   	<div class="collapse navbar-collapse" id="navbarNav">
                     	<ul class="navbar-nav ml-auto">
                         	<li class="nav-item">
-                        		<a class="nav-link" href="/home">HOME </a>
+                         		<a class="nav-link" href="/home">HOME </a>
                         	</li>
-                          	<li class="nav-item">
-                          		<a class="nav-link" href="/search">SEARCH</a>
-                          	</li>
-                          	<li class="nav-item">
-                          		<a class="nav-link" href="/addrecipe">ADD A RECIPES</a>
-                          	</li>
-                          	<li class="nav-item">
-                          		<a class="nav-link" href="/login">LOGIN/CREATE ACCOUNT</a>
-                          	</li>
+                        	<li class="nav-item">
+                        		<a class="nav-link" href="/search">SEARCH</a>
+                        	</li>
+                        	<li class="nav-item">
+                        		<a class="nav-link" href="/addrecipe">ADD A RECIPES</a>
+                        	</li>
+                        	<li class="nav-item">
+                        		<a class="nav-link" href="/login">LOGIN/CREATE ACCOUNT</a>
+                        	</li>
                           	<li class="nav-item">
                           		<a class="nav-link" href="/login">YOUR RECIPES</a>
                           	</li>
@@ -52,53 +51,39 @@
                           	<li class="nav-item">
                           		<a class="nav-link" href="#contact">CONTACT</a>
                           	</li>
-                      	</ul>
-                  	</div>
+                       	</ul>
+                  </div>
               	</nav>
           	</div>
       	</header>
-		<center>
-			<div class="search">
-				<!-- INPUT FOR SEARCH API -->
-				<form action="" method="post">
-					{{ search_api_form.csrf_token }}
-					{{ search_api_form.hidden_tag() }}
-					<p>
-						{{ search_api_form.search_ingredients.label }} <br> {{ search_api_form.search_ingredients(size=32) }}
-					</p>
-					<p>
-						{{ search_api_form.search_type.label }} <br> {{ search_api_form.search_type(size=2) }}
-					</p>
-					<p>{{ search_api_form.submit() }}</p>
-				</form>
-			</div>
-		</center>
-  	</body>
 
-<title>HUNGY: Search</title>
-	<head>Search Page</head>
-		<body>
-		    <h1>Welcome!</h1>
-		    <p>The way you can search is very simple. If you want to  </p>
-		</body>
+		<div class='container'>
+			<center>
+				<!-- INPUT TO ADD RECIPE -->
+				<form action="" method="post">
+					{{ add_recipe_form.csrf_token }}
+					{{ add_recipe_form.hidden_tag() }}
+					<p>
+						{{ add_recipe_form.user_id.label }} <br> {{ add_recipe_form.user_id(size=32) }}
+					</p>
+					<p>
+						{{ add_recipe_form.password.label }} <br> {{ add_recipe_form.password(size=32) }}
+					</p>
+					<p>
+						{{ add_recipe_form.title.label }} <br> {{ add_recipe_form.title(size=32) }}
+					</p>
+					<p>
+						{{ add_recipe_form.ingredients.label }} <br> {{ add_recipe_form.ingredients(size=32) }}
+					</p>
+					<p>
+						{{ add_recipe_form.directions.label }} <br> {{ add_recipe_form.directions(size=32) }}
+					</p>
+					<p>
+						{{ add_recipe_form.submit() }}
+					</p>
+				</form>	
+			</center>
+		</div>
+  	</body>
 </html>
 {% endblock %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

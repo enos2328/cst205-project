@@ -1,9 +1,9 @@
-<!-- reipies_info.html -->
+<!-- contact.html -->
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Reipe info</title>
+    <title>FAQ</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -31,35 +31,22 @@
               <a class="nav-link" href="/recipes/2/2">SEARCH</a>
               </li>
               <li class="nav-item">
-              <a class="nav-link" href="/add">ADD</a>
+              <a class="nav-link" href="">ADD</a>
               </li>
               <li class="nav-item">
               <a class="nav-link" href="/faq">FAQ</a>
               </li>
               <li class="nav-item">
-              <a class="nav-link" href="/contact">CONTACT</a>
+              <a class="nav-link" href="/contract">CONTACT</a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
       <div class="container">
-        <h1>Recipes <br><small>Here is the recipes that best fits your search</small></h1>
-        {% if data%}
-        <!-- getting all 'keys' from the json object -->
-        <br>
-        <h3>{{data['title']}}</h3> <!-- getting the 'value' of the 'key' 'title' from the json object -->
-        <div><img src="{{data['image']}}" alt="" width="300"  class="img-rounded"></div>
-        <div><small>instructions: {{data['instructions']}}</small></div>
-        <p></p></a>
-        <br><br>
-        {% else %}
-          no data
-        {% endif %}
+
+
       </div>
     </section>
   </body>
 </html>
-
-
-
