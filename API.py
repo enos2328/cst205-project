@@ -77,7 +77,7 @@ def recipe(recipe_id):
 ########################
 @app.route('/faq_page')
 def faq_page():
-    return render_template('search.html')
+    return render_template('faq.html')
 
 ##################
 ## CONTACT PAGE ##
@@ -91,7 +91,8 @@ def contact():
 ##################
 @app.route('/search')
 def search():
-    return render_template('search.html')
+    search_api=
+    return render_template('search.html', search_api_form=search_api)
 
 
 if __name__ == '__main__':
