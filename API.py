@@ -85,6 +85,13 @@ def faq_page():
 @app.route('/contact')
 def contact():
      return render_template('contact.html')
+    
+##################
+## SEARCH PAGE? ##
+##################
+@app.route('/search')
+def search():
+    return redner_template('search.html')
 
 
 if __name__ == '__main__':
