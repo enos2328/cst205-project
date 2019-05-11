@@ -31,6 +31,15 @@ headers = {
     "X-RapidAPI-Key": api_key
 }
 
+
+############################
+### WHERE IS MAIN PAGE?? ###
+############################
+@app.route('/')
+def main_page():
+    return render_template('index.html')
+
+
 ########################
 ### RECIPE LIST PAGE ###
 ########################
