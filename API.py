@@ -91,8 +91,7 @@ def contact():
 ##################
 @app.route('/search')
 def search():
-    search_api=
-    return render_template('search.html', search_api_form=search_api)
+    return render_template('search.html')
 
 
 if __name__ == '__main__':
