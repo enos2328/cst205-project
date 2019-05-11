@@ -1,7 +1,10 @@
 """
     File Name: API.py
-    Name: Magnus Harboe
-    Date: 5 / 1 / 19
+    Name:   Magnus Harboe
+            Athena Enosara
+            Andrew Marmolejo
+            Guadalupe Cisneros
+    Due Date: 5 / 13 / 19
     Description: This program uses the spoonacular api to find recipes that fits what the user have in their fridge.
 """
 from flask import Flask, render_template
@@ -37,6 +40,7 @@ headers = {
 ############################
 @app.route('/')
 def main_page():
+    
     return render_template('index.html')
 
 
