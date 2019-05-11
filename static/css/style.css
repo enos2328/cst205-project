@@ -110,3 +110,11 @@ header
     color: #fefefe !important;
     border-bottom: 1px solid white;
 }
+
+.underline{
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: bold;
+}

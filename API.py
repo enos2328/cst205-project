@@ -49,7 +49,7 @@ def main():
 @app.route('/recipes/<int:recipe_id>')
 def recipe(recipe_id):
     endpoint = f'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/{recipe_id}/information'
-        payload = {
+    payload = {
             'id': recipe_id
         }
     try:
