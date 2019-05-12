@@ -2,9 +2,9 @@
 
    File Name: search.html   
    Template File: 	This page will let the user
-   					input search words and 
-   					selected a search method to 
-   					search the API. 
+   			input search words and 
+   			selected a search method to 
+   			search the API. 
                                                                                               
    Authors: Andrew Marmolejo
             Athena Enosara
@@ -15,18 +15,12 @@
    Course: CST 205    
 
 -->
-{% extends 'bootstrap/base.html' %}
-{% block title %}
-	Hungy - Search
-{% endblock %}
-
-{% block content %}
 <!DOCTYPE html>
 <html>
 
     <head>
         <meta charset="utf-8">
-        <title>Home</title>
+        <title>Search</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -71,6 +65,8 @@
           	</div>
       	</section>
 	<center>
+		<h1>Welcome!</h1>
+		<p>The way you can search is very simple. If you want to  </p>
 		<div class="search">
 			<!-- INPUT FOR SEARCH API -->
 			<form action="" method="post">
@@ -87,31 +83,4 @@
 		</div>
 	</center>
   	</body>
-
-<title>HUNGY: Search</title>
-	<head>Search Page</head>
-		<body>
-		    <h1>Welcome!</h1>
-		    <p>The way you can search is very simple. If you want to  </p>
-		</body>
 </html>
-{% endblock %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
