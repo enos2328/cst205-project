@@ -9,7 +9,6 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Hungy - Your Recipes</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -19,7 +18,7 @@
     </head>
     <body>
         <!-------Header Section---------->
-        <header>
+        <section>
             <!--Navigation bar-->
             <div class="nav-bar">
                 <nav class="navbar navbar-expand-lg">
@@ -58,7 +57,7 @@
                     {% print(username.capitalize()) %}
                 </h1>
             </div>
-        </header>
+        </section>
         <div class="container">
             <ul class="list-group">
                 <!-- PRINTS YOUR RECIPES -->
