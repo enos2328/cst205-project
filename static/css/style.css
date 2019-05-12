@@ -31,6 +31,16 @@ header
     margin: 25px;
 }
 
+.hungy_subpage
+{
+    background-color: black;
+    color: white;
+    position: relative;
+    text-align: center;
+    font-family: sans-serif;
+    top: 50px;
+}
+
 .btn.btn1
 {
     font-size: 18px;
@@ -111,6 +121,7 @@ header
     border-bottom: 1px solid white;
 }
 
+/*---- BASIC TEXT STYLING -----*/
 .underline{
   text-decoration: underline;
 }
