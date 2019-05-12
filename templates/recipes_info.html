@@ -1,25 +1,4 @@
-<!--
-
-   File Name: recipes_info.html   
-   Template File:   This page will display the 
-                    information of a selected 
-                    recipe. 
-                                                                                              
-   Authors: Andrew Marmolejo
-            Athena Enosara
-            Magnus Harboe
-            Guadalupe Cisneros
-
-   Date: May 13th, 2019                                                                 
-   Course: CST 205    
-
--->
-{% extends 'bootstrap/base.html' %}
-{% block title %}
-	Hungy - Recipe Info
-{% endblock %}
-
-{% block content %}
+<!-- repies_info.html -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -46,44 +25,48 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="/">HOME </a>
+              <a class="nav-link" href="/">HOME </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/search">SEARCH</a>
+              <a class="nav-link" href="/recipes/2/2">SEARCH</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/login">ACCOUNT</a>
+              <a class="nav-link" href="/add">ADD</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/addrecipe">ADD</a>
+              <a class="nav-link" href="/faq">FAQ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/faq">FAQ</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/contact">CONTACT</a>
+              <a class="nav-link" href="/contact">CONTACT</a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
       <div class="container">
-        <h1>Recipes <br><small>Here is the recipes that best fits your search</small></h1>
-        {% if data%}
-        <!-- getting all 'keys' from the json object -->
-        <br>
-        <h3>{{data['title']}}</h3> <!-- getting the 'value' of the 'key' 'title' from the json object -->
-        <div><img src="{{data['image']}}" alt="" width="300"  class="img-rounded"></div>
-        <div><small>instructions: {{data['instructions']}}</small></div>
-        <p></p></a>
-        <br><br>
-        {% else %}
-          no data
-        {% endif %}
+      <div class="row">
+        <div class="col-md-6">
+          <img src={{ img }} style=" vertical-align:right; padding-top: 10%; width: 70%; padding-bottom: 5%"> <br>
+        </div>
+
+        <div class="col-md-6">
+          <!-- INGREDIENT LIST -->
+          <h5 style="padding-top: 10%;"> Ingredients: </h5>
+          {% for ingredient in ingredients %}
+            {{ ingredient['originalString'] }} <br>
+          {% endfor %} <br>
+        </div>
       </div>
+    </div>
+
+    <div class="container col-md-6">
+      <!-- COOKING INSTRUCTIONS -->
+      <h5 class="text-center">Cooking Instructions</h5>
+      <p>{{ instructions }}</p>
+    </div>
     </section>
   </body>
 </html>
-{% endblock %}
+
 
 
