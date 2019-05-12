@@ -25,19 +25,22 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-              <a class="nav-link" href="/">HOME </a>
+                <a class="nav-link" href="/">HOME </a>
               </li>
               <li class="nav-item">
-              <a class="nav-link" href="/search">SEARCH</a>
+                <a class="nav-link" href="/search">SEARCH</a>
               </li>
               <li class="nav-item">
-              <a class="nav-link" href="/login">ADD</a>
+                <a class="nav-link" href="/addrecipe">ADD</a>
               </li>
               <li class="nav-item">
-              <a class="nav-link" href="/faq">FAQ</a>
+                <a class="nav-link" href="/login">ACCOUNT</a>
               </li>
               <li class="nav-item">
-              <a class="nav-link" href="/contract">CONTACT</a>
+                <a class="nav-link" href="/faq">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">CONTACT</a>
               </li>
             </ul>
           </div>
@@ -45,7 +48,7 @@
       </div>
       <div class="container">
 
-        <h1>Recipes <br><small>Here is the recipes that best fits what you have</small></h1>
+        <h1>Recipes <br><small>Here is the recipes that best fits what you have.</small></h1>
 
         {% if data %}
           {% for recipe in data %} <!-- getting all 'keys' from the json object -->
