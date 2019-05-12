@@ -31,14 +31,43 @@ header
     margin: 25px;
 }
 
-.hungy-sub
-{
-    background-color: black;
-    color: white;
-    position: relative;
-    text-align: center;
-    font-family: sans-serif;
-    top-margin: 50px;
+.hungy-sub{
+
+}
+
+#sub-header{
+  height: 30vh;
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(img/bread-color-copyspace-1565982.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: wrap;
+  text-align: center;
+}
+
+#body-div{
+  background-color: black;
+  position: relative;
+  text-align: center;
+  font-family: sans-serif;
+  top-margin: 20vh;
+  font-size: 30vh;
+}
+
+#contact-foot{
+  height: 20vh;
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(img/bread-color-copyspace-1565982.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.contact-body{
+  color: white !important;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 34vh;
 }
 
 .btn.btn1
