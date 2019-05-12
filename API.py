@@ -203,5 +203,25 @@ def login():
 
 
 
+
+######################
+## ADD RECIPE PAGE  ##
+######################
+@app.route('/addrecipe', methods=['GET','POST']) 
+def addrecipe():
+    add_recipe_form = Add_Recipe()  #   CREATES AN Add_Recipe() OBJECT
+
+    #   IF add_recipe_form WAS SUBMITTED, RUNS THE CODE
+    if add_recipe_form.validate_on_submit():
+        add_recipe(add_recipe_form.user_id.data, add_recipe_form.password.data, add_recipe_form.title.data, add_recipe_form.ingredients.data, add_recipe_form.directions.data)  #   ADDS RECIPE TO LIST
+        name1 = add_recipe_form.user_id.data    #   SAVES THE USERNAME
+        print(accounts)     #   PRINTS ACCOUNTS LIST TO TERMINAL
+        print("Recipe Added")   #   PRINTS TO TERMINAL
+        return render_template('yourrecipes.html', accounts=accounts, username=name1)
+    return render_template('addrecipe.html', add_recipe_form=add_recipe_form)
+
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
