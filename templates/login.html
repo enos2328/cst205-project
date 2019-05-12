@@ -2,8 +2,8 @@
 
    File Name: login.html   
    Template File: 	This page will let the user
-   					log into their account or 
-   					create an account. 
+   			log into their account or 
+   			create an account. 
                                                                                               
    Authors: Andrew Marmolejo
             Athena Enosara
@@ -14,17 +14,12 @@
    Course: CST 205    
 
 -->
-{% extends 'bootstrap/base.html' %}
-{% block title %}
-	Hungy - Login
-{% endblock %}
 
-{% block content %}
 <!DOCTYPE html>
 <html>
   	<head>
     	<meta charset="utf-8">
-        <title>Home</title>
+        <title>Login</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -38,7 +33,6 @@
           	<!--Navigation bar-->
           	<div class="nav-bar">
               	<nav class="navbar navbar-expand-lg">
-              		<!-----MANGLER LOGO--->
                   	<a class="navbar-brand" href="#"></a>
                   	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     	<i class="fa fa-bars"></i>
@@ -52,8 +46,8 @@
 						<a class="nav-link" href="/search">SEARCH</a>
 					</li>
 					<li class="nav-item">
-                		<a class="nav-link" href="/login">ACCOUNT</a>
-              		</li>
+						<a class="nav-link" href="/login">ACCOUNT</a>
+					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="/addrecipe">ADD</a>
 					</li>
@@ -89,4 +83,3 @@
 	</section>
     </body>
 </html>
-{% endblock %}
