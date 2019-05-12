@@ -31,14 +31,14 @@ header
     margin: 25px;
 }
 
-.hungy_subpage
+.hungy-sub
 {
     background-color: black;
     color: white;
     position: relative;
     text-align: center;
     font-family: sans-serif;
-    top: 50px;
+    top-margin: 50px;
 }
 
 .btn.btn1
