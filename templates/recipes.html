@@ -59,7 +59,7 @@
         {% if data %}
           {% for recipe in data %} <!-- getting all 'keys' from the json object -->
             <div class="recipe-box col-md-6">
-              <a href="/recipe/{{recipe['id']}}"><h3>{{recipe['title']}}</h3> <!-- getting the 'value' of the 'key' 'title' from the json object -->
+              <a href="/recipes/{{recipe['id']}}"><h3>{{recipe['title']}}</h3> <!-- getting the 'value' of the 'key' 'title' from the json object -->
               <div><img src="{{recipe['image']}}" alt="" width="300"  class="img-rounded"></div>
               <div><small>this recipe has {{recipe['likes']}} likes</small></div>
               <p>{{recipe['usedIngredients']['originalName']}}</p></a>
