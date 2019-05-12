@@ -106,7 +106,7 @@ def add_recipe(my_username, my_password, my_title, my_ingredients, my_directions
 ############################
 @app.route('/')
 def main_page():
-    return render_template('index.html', account_created = False)
+    return render_template('index.html')
 
 
 ########################
@@ -196,9 +196,10 @@ def login():
             return render_template('yourrecipes.html', accounts=accounts, username=u_name)
         #   ELSE, THE USER CHOSE THE CREATE ACCOUNT OPTION
         else:
+            add_recipe_form = Add_Recipe()  #   CREATES AN Add_Recipe() OBJECT
             store_account(login_account_form.user_id.data, login_account_form.password.data)    #   CREATES AN ACCOUNT
             print(accounts) #   PRINTS TO TERMINAL
-            return render_template('index.html', account_created = True)
+            return render_template('addrecipe.html', add_recipe_form=add_recipe_form, account_created = True)
     return render_template('login.html', login_account_form=login_account_form)
 
 
@@ -218,7 +219,7 @@ def addrecipe():
         print(accounts)     #   PRINTS ACCOUNTS LIST TO TERMINAL
         print("Recipe Added")   #   PRINTS TO TERMINAL
         return render_template('yourrecipes.html', accounts=accounts, username=name1)
-    return render_template('addrecipe.html', add_recipe_form=add_recipe_form)
+    return render_template('addrecipe.html', add_recipe_form=add_recipe_form, account_created = False)
 
 
 
