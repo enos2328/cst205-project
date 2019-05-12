@@ -125,19 +125,27 @@ def main():
 ########################
 ## PICKED RECIPE PAGE ##
 ########################
-@app.route('/recipes/<int:recipe_id>')
+@app.route('/recipe/<int:recipe_id>')
 def recipe(recipe_id):
     endpoint = f'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/{recipe_id}/information'
+    api_key = "4889bc9e24mshb28791c820806bep1256c2jsn921e1c55af76"
     payload = {
-            'id': recipe_id
-        }
+        'id': recipe_id
+    }
+
     try:
         r = requests.get(endpoint, params=payload, headers=headers)
-        data2 = r.json()
+        data = r.json()
+        # Unpack json
+        title = data['title']
+        img = data['image']
+        ingredients = data['extendedIngredients']  # list
+        instructions = data['instructions']
     except:
         print('please try again')
-    return render_template('recipes_info.html', data=data2)  # redering the html template and also passing the information it gathered from the API
-
+    return render_template('recipes_info.html', title=title,
+                           img=img, ingredients=ingredients,
+                           instructions=instructions)  # redering the html template and also passing the information it gathered from the API
 
 ########################
 ## FAQ + CONTACT PAGE ##
