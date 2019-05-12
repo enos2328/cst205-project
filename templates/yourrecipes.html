@@ -51,14 +51,12 @@
                     </div>
                 </nav>
             </div>
-            <div class="container welcome">
-                <!-- TITLE WITH THE USERNAME -->
+        </section>
+        <div class="container">
+          <!-- TITLE WITH THE USERNAME -->
                 <h1>Your Recipes
                     {% print(username.capitalize()) %}
                 </h1>
-            </div>
-        </section>
-        <div class="container">
             <ul class="list-group">
                 <!-- PRINTS YOUR RECIPES -->
                 {% for item in accounts %}
