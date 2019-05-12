@@ -60,13 +60,15 @@
             <ul class="list-group">
                 <!-- PRINTS YOUR RECIPES -->
                 {% for item in accounts %}
-                    {% for rec in item.recipes %}
-                        <li class="list-group-item">
-                            <h4><strong>{{ rec.title }}</strong></h4>
-                            <strong>Ingredients: </strong>{{ rec.ingredients }}<br/>
-                            <strong>Directions: </strong>{{ rec.directions }}<br/>
-                        </li>
-                    {% endfor %}
+                    {% if username == item.name %}
+                        {% for rec in item.recipes %}
+                            <li class="list-group-item">
+                                <h4><strong>{{ rec.title }}</strong></h4>
+                                <strong>Ingredients: </strong>{{ rec.ingredients }}<br/>
+                                <strong>Directions: </strong>{{ rec.directions }}<br/>
+                            </li>
+                        {% endfor %}
+                    {% endif %}
                 {% endfor %}
             </ul>
         </div>
