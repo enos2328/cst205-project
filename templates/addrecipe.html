@@ -19,68 +19,69 @@
   	</head>
   	<body>
     	<!-------Header Section---------->
-      	<header>
-          	<!--Navigation bar-->
-        	<div class="nav-bar">
-            	<nav class="navbar navbar-expand-lg">
-              		<!-----MANGLER LOGO--->
-                	<a class="navbar-brand" href="#"></a>
-                	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    	<i class="fa fa-bars"></i>
-                  	</button>
-                  	<div class="collapse navbar-collapse" id="navbarNav">
-                    	<ul class="navbar-nav ml-auto">
-                        	<li class="nav-item">
-                         		<a class="nav-link" href="/">HOME </a>
-                        	</li>
-                        	<li class="nav-item">
-                        		<a class="nav-link" href="/search">SEARCH</a>
-                        	</li>
-                        	<li class="nav-item">
-                        		<a class="nav-link" href="/addrecipe">ADD</a>
-                        	</li>
-                        	<li class="nav-item">
-                        		<a class="nav-link" href="/login">ACCOUNT</a>
-                        	</li>
-                          	<li class="nav-item">
-                          		<a class="nav-link" href="/faq">FAQ</a>
-                          	</li>
-                          	<li class="nav-item">
-                          		<a class="nav-link" href="/contact">CONTACT</a>
-                          	</li>
-                       	</ul>
-                	</div>
-              	</nav>
-          	</div>
-      	</header>
+		<section>
+			<!--Navigation bar-->
+			<div class="nav-bar">
+			<nav class="navbar navbar-expand-lg">
+				<!-----MANGLER LOGO--->
+				<a class="navbar-brand" href="#"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<i class="fa fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/">HOME </a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/search">SEARCH</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/addrecipe">ADD</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/login">ACCOUNT</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/faq">FAQ</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/contact">CONTACT</a>
+					</li>
+				</ul>
+				</div>
+			</nav>
+			</div>
 
-		<div class='container'>
-			<center>
-				<!-- INPUT TO ADD RECIPE -->
-				<form action="" method="post">
-					{{ add_recipe_form.csrf_token }}
-					{{ add_recipe_form.hidden_tag() }}
-					<p>
-						{{ add_recipe_form.user_id.label }} <br> {{ add_recipe_form.user_id(size=32) }}
-					</p>
-					<p>
-						{{ add_recipe_form.password.label }} <br> {{ add_recipe_form.password(size=32) }}
-					</p>
-					<p>
-						{{ add_recipe_form.title.label }} <br> {{ add_recipe_form.title(size=32) }}
-					</p>
-					<p>
-						{{ add_recipe_form.ingredients.label }} <br> {{ add_recipe_form.ingredients(size=32) }}
-					</p>
-					<p>
-						{{ add_recipe_form.directions.label }} <br> {{ add_recipe_form.directions(size=32) }}
-					</p>
-					<p>
-						{{ add_recipe_form.submit() }}
-					</p>
-				</form>	
-			</center>
-		</div>
+
+			<div class='container'>
+				<center>
+					<!-- INPUT TO ADD RECIPE -->
+					<form action="" method="post">
+						{{ add_recipe_form.csrf_token }}
+						{{ add_recipe_form.hidden_tag() }}
+						<p>
+							{{ add_recipe_form.user_id.label }} <br> {{ add_recipe_form.user_id(size=32) }}
+						</p>
+						<p>
+							{{ add_recipe_form.password.label }} <br> {{ add_recipe_form.password(size=32) }}
+						</p>
+						<p>
+							{{ add_recipe_form.title.label }} <br> {{ add_recipe_form.title(size=32) }}
+						</p>
+						<p>
+							{{ add_recipe_form.ingredients.label }} <br> {{ add_recipe_form.ingredients(size=32) }}
+						</p>
+						<p>
+							{{ add_recipe_form.directions.label }} <br> {{ add_recipe_form.directions(size=32) }}
+						</p>
+						<p>
+							{{ add_recipe_form.submit() }}
+						</p>
+					</form>	
+				</center>
+			</div>
+		</section>
   	</body>
 </html>
 {% endblock %}
