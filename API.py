@@ -101,15 +101,12 @@ def add_recipe(my_username, my_password, my_title, my_ingredients, my_directions
         count += 1
 
 
-
-
-
 ############################
 ### WHERE IS MAIN PAGE?? ###
 ############################
 @app.route('/')
 def main_page():
-    return render_template('index.html')
+    return render_template('index.html', account_created = False)
 
 
 ########################
@@ -156,11 +153,54 @@ def contact():
      return render_template('contact.html')
     
 ##################
-## SEARCH PAGE? ##
+## SEARCH PAGE  ##
 ##################
-@app.route('/search')
+@app.route('/search', methods=['GET','POST']) 
 def search():
-    return render_template('search.html')
+    search_api_form = Search_API()  #   CREATES A Search_API() OBJECT
+
+    #   IF search_api_form WAS SUMBITTED, RUNS THE CODE
+    if search_api_form.validate_on_submit():
+        user_input_list = search_api_form.search_ingredients.data.split()   # SPLITS THE USER INPUT (INGREDIENTS) INTO A STRING
+        rank = search_api_form.search_type.data     #   SAVES THE SEARCH TYPE 1 OR 2 THE USER CHOSE
+        payload = {     # FOR API SEARCH
+            'fillIngredients': False,
+            'ingredients': user_input_list,
+            'limitLicense': False,
+            'number': 5,
+            'ranking': rank
+        }
+        try:
+            r = requests.get(endpoint, params=payload, headers=headers)
+            data = r.json()
+        except:
+            print('please try again')
+        print('searched API')   #   PRINTS TO TERMINAL
+        return render_template('recipes.html', data=data) 
+    return render_template('search.html', search_api_form=search_api_form)
+
+
+##################
+## LOG IN PAGE  ##
+##################
+@app.route('/login', methods=['GET','POST']) 
+def login():
+    login_account_form = Account_Info() #   CREATES Account_Info OBJECT
+
+    #   IF login_account_form FORM WAS SUBMITTED 
+    if login_account_form.validate_on_submit():
+        #   IF USER CHOSE THE LOG IN OPTION
+        if login_account_form.create_login.data == '1':
+            u_name = login_account_form.user_id.data    #   SAVES THE USER NAME TO PASS IN render_template
+            print('logged in')  # PRINTS TO TERMINAL
+            return render_template('yourrecipes.html', accounts=accounts, username=u_name)
+        #   ELSE, THE USER CHOSE THE CREATE ACCOUNT OPTION
+        else:
+            store_account(login_account_form.user_id.data, login_account_form.password.data)    #   CREATES AN ACCOUNT
+            print(accounts) #   PRINTS TO TERMINAL
+            return render_template('index.html', account_created = True)
+    return render_template('login.html', login_account_form=login_account_form)
+
 
 
 if __name__ == '__main__':
