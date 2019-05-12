@@ -3,34 +3,34 @@
 /*---------------------------*/
 body
 {
-    margin:0;
-    padding: 0;
-    font-family: sans-serif;
+  margin:0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
 header
 {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(img/bread-color-copyspace-1565982.jpg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    overflow: hidden;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(img/bread-color-copyspace-1565982.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
 }
 
 .welcome
 {
-    position: relative;
-    text-align: center;
-    font-family: sans-serif;
-    top: 200px;
+  position: relative;
+  text-align: center;
+  font-family: sans-serif;
+  top: 200px;
 }
 
 .welcome h1
 {
-    color: white;
-    font-size: 54px;
-    margin: 25px;
+  color: white;
+  font-size: 54px;
+  margin: 25px;
 }
 
 .hungy-sub{
@@ -74,51 +74,66 @@ header
 
 .btn.btn1
 {
-    font-size: 18px;
-    color: #fff;
-    background: coral;
-    letter-spacing: 2px;
-    margin: 5px;
-    padding: 7px 28px;
-    text-decoration: none;
-    border: 1px solid coral;
-    border-radius: 25px;
+  font-size: 18px;
+  color: #fff;
+  background: coral;
+  letter-spacing: 2px;
+  margin: 5px;
+  padding: 7px 28px;
+  text-decoration: none;
+  border: 1px solid coral;
+  border-radius: 25px;
 }
 .btn.btn2
 {
-    font-size: 18px;
-    color: #fff;
-    letter-spacing: 2px;
-    margin: 5px;
-    padding: 7px 28px;
-    text-decoration: none;
-    border: 1px solid coral;
-    border-radius: 25px;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 2px;
+  margin: 5px;
+  padding: 7px 28px;
+  text-decoration: none;
+  border: 1px solid coral;
+  border-radius: 25px;
 }
 
 .btn1:hover
 {
-   background: coral;
-   transition: .4s;
-   color: #fff !important;
-   border: 1px solid #fff;
+ background: coral;
+ transition: .4s;
+ color: #fff !important;
+ border: 1px solid #fff;
 }
 
 .btn2:hover
 {
-   border: 1px solid #fff;
-   transition: .4s;
-   color: #fff !important;
+ border: 1px solid #fff;
+ transition: .4s;
+ color: #fff !important;
 }
 
+.underline{
+  text-decoration: underline;
+}
+
+<<<<<<< HEAD
+.bold {
+  font-weight: bold;
+}
+
+.white{
+  color: white !important;
+}
+
+=======
+>>>>>>> db59c2504850183722f38d139e48ec885faa5fbb
 /*----------------*/
 /*-----NAVBAR-----*/
 /*----------------*/
 .nav-bar
 {
-   top: 0 ;
-   position: sticky;
-   z-index: 2;
+ top: 0 ;
+ position: sticky;
+ z-index: 2;
 }
 .navbar
 {
@@ -126,39 +141,30 @@ header
 }
 .navbar-brand img
 {
-    height: 50px;
+  height: 50px;
 }
 .nav-bar .fa-bars
 {
-    font-size: 35px;
-    color: #fefefe;
+  font-size: 35px;
+  color: #fefefe;
 }
 
 .navbar-toggler
 {
-    outline:none !important;
+  outline:none !important;
 }
 .navbar-nav
 {
-    float: right;
-    text-align:right;
+  float: right;
+  text-align:right;
 }
 .nav-link
 {
-    color: #fefefe !important;
-    font-family: 'Raleway', sans-serif;
+  color: #fefefe !important;
+  font-family: 'Raleway', sans-serif;
 }
 .nav-link:hover
 {
-    color: #fefefe !important;
-    border-bottom: 1px solid white;
-}
-
-/*---- BASIC TEXT STYLING -----*/
-.underline{
-  text-decoration: underline;
-}
-
-.bold {
-  font-weight: bold;
+  color: #fefefe !important;
+  border-bottom: 1px solid white;
 }
