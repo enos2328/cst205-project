@@ -51,15 +51,15 @@
 				</nav>
 			</div>
 			<div class="container welcome">
-			    <h1>HUNGY?</h1>
+				<h1>HUNGY?</h1>
 				<a href="/search" class="btn btn1"><i class="fa fa-search"></i> Search</a>
-			    <a href="/contact" class="btn btn2">Contact</a>
+			    	<a href="/contact" class="btn btn2">Contact</a>
+				<!-------TRUE FALSE IF ACCOUNT CREATED OR NOT---------->
+				{% if account_created == True%}
+					<h1>Account Was Created!</h1>
+				{% endif %}
 			</div>
 		</header>
-		<!-------TRUE FALSE IF ACCOUNT CREATED OR NOT---------->
-		{% if account_created == True%}
-			<h1>Account Was Created!</h1>
-		{% endif %}
 	</body>
 </html>
-
+{% endblock %}
