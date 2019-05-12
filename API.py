@@ -7,7 +7,7 @@
     Due Date: 5 / 13 / 19
     Description: This program uses the spoonacular api to find recipes that fits what the user have in their fridge.
 """
-from flask import Flask, render_template, flash, redirect, url_for
+from flask import Flask, render_template, flash, redirect, url_for, request
 import requests
 import json
 from flask_bootstrap import Bootstrap
@@ -31,6 +31,7 @@ payload = {
 }
 
 accounts = []   #   TO SAVE ACCOUNTS
+created = 0     #   TO PASS TO CHECK IF AN ACCOUNT WAS CREATED
 
 api_key = "4889bc9e24mshb28791c820806bep1256c2jsn921e1c55af76"
 
@@ -101,9 +102,9 @@ def add_recipe(my_username, my_password, my_title, my_ingredients, my_directions
         count += 1
 
 
-############################
-### WHERE IS MAIN PAGE?? ###
-############################
+########################
+###     MAIN PAGE    ###
+########################
 @app.route('/')
 def main_page():
     return render_template('index.html')
@@ -196,22 +197,26 @@ def login():
             return render_template('yourrecipes.html', accounts=accounts, username=u_name)
         #   ELSE, THE USER CHOSE THE CREATE ACCOUNT OPTION
         else:
-            add_recipe_form = Add_Recipe()  #   CREATES AN Add_Recipe() OBJECT
             store_account(login_account_form.user_id.data, login_account_form.password.data)    #   CREATES AN ACCOUNT
-            print(accounts) #   PRINTS TO TERMINAL
-            return render_template('addrecipe.html', add_recipe_form=add_recipe_form, account_created = True)
+            return redirect(url_for('.addrecipe2', created = 1))
     return render_template('login.html', login_account_form=login_account_form)
 
 
 
 
-######################
-## ADD RECIPE PAGE  ##
-######################
+########################
+## ADD RECIPE PAGE 1  ##
+########################
 @app.route('/addrecipe', methods=['GET','POST']) 
 def addrecipe():
     add_recipe_form = Add_Recipe()  #   CREATES AN Add_Recipe() OBJECT
 
+    #   TRUE IF ACCOUNT WAS CREATED BEFORE THIS PAGE
+    if created == 0: 
+        account_created = False
+    else:
+        account_created = True
+        
     #   IF add_recipe_form WAS SUBMITTED, RUNS THE CODE
     if add_recipe_form.validate_on_submit():
         add_recipe(add_recipe_form.user_id.data, add_recipe_form.password.data, add_recipe_form.title.data, add_recipe_form.ingredients.data, add_recipe_form.directions.data)  #   ADDS RECIPE TO LIST
@@ -220,6 +225,29 @@ def addrecipe():
         print("Recipe Added")   #   PRINTS TO TERMINAL
         return render_template('yourrecipes.html', accounts=accounts, username=name1)
     return render_template('addrecipe.html', add_recipe_form=add_recipe_form, account_created = False)
+
+########################
+## ADD RECIPE PAGE 2  ##
+########################
+@app.route('/addrecipe2', methods=['GET','POST'])
+def addrecipe2():
+    add_recipe_form = Add_Recipe()  #   CREATES AN Add_Recipe() OBJECT
+
+    #   GETS PARAMETER 'created' FROM URL_FOR
+    created = request.args['created']
+    #   IF ACCOUNT WAS CREATED BEFORE THIS PAGE, account_created IS TRUE
+    if created == 0: 
+        account_created = False
+    else:
+        account_created = True
+
+    #   IF add_recipe_form WAS SUBMITTED, RUNS THE CODE
+    if add_recipe_form.validate_on_submit():
+        add_recipe(add_recipe_form.user_id.data, add_recipe_form.password.data, add_recipe_form.title.data, add_recipe_form.ingredients.data, add_recipe_form.directions.data)  #   ADDS RECIPE TO LIST
+        name1 = add_recipe_form.user_id.data    #   SAVES THE USERNAME
+        print("Recipe Added")   #   PRINTS TO TERMINAL
+        return render_template('yourrecipes.html', accounts=accounts, username=name1)
+    return render_template('addrecipe.html', add_recipe_form=add_recipe_form, account_created=account_created)
 
 
 
