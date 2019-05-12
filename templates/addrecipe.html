@@ -60,13 +60,15 @@
 				</div>
 			</nav>
 			</div>
+			<center>
+				<!-------TRUE FALSE IF ACCOUNT CREATED OR NOT---------->
+				{% if account_created == True %}
+					<h3>Your Account Was Created!</h3>
+					<p>Add A Recipe</p>
+				{% endif %}
+			</center>
 			<div class='container'>
 				<center>
-					<!-------TRUE FALSE IF ACCOUNT CREATED OR NOT---------->
-					{% if account_created == True %}
-						<h3>Your Account Was Created!</h3>
-						<p>Add A Recipe</p>
-					{% endif %}
 					<!-- INPUT TO ADD RECIPE -->
 					<form action="" method="post">
 						{{ add_recipe_form.csrf_token }}
