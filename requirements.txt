@@ -7,4 +7,6 @@ Due Date: 5 / 13 / 19
 Description: This file outlines the requirements for the project. 
 
 The requirements to run the project include: 
-
+        1. Having a terminal window open. 
+        2. Having the enviroment open in your terminal. 
+        3. Python to run the flask project API.py
