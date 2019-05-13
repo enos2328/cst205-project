@@ -1,5 +1,4 @@
 File Name: requirements.txt
-
 Name:   Magnus Harboe
         Athena Enosara
         Andrew Marmolejo
@@ -7,18 +6,20 @@ Name:   Magnus Harboe
 Due Date: 5 / 13 / 19
 Description: This file outlines the requirements for the project. 
 
+
+
 Dependencies needed to run the application:
+
         ○ Flask           1.0.2
         ○ Flask-Bootstrap 3.3.7.1
         ○ Flask-WTF       0.14.2
         ○ requests        2.21.0
         ○ WTForms         2.2.1
-        ○ DataRequired from wtforms.validators
 
-The requirements to run the project include: 
-        1. Having a terminal window open. 
-        2. Having the enviroment open in your terminal. 
-        3. Python to run the flask project API.py
-        4. A web browser to open the project in once your run the flask project.
-        5. Familiarize yourself with the web page. 
-        6. Read the FAQ (if necessary)
+
+
+
+
+
+
+
