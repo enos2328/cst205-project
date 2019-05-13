@@ -38,7 +38,8 @@ body{
   background: url(img/bread-color-copyspace-1565982.jpg);
   background-position: absolute;
   background-size: cover;
-  height: 20px;
+  topimargin: 50px;
+  height: 70px;
 }
 
 .subhead{
