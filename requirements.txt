@@ -1,4 +1,4 @@
-File Name: experiments.txt
+File Name: requirements.txt
 
 Name:   Magnus Harboe
         Athena Enosara
@@ -6,6 +6,9 @@ Name:   Magnus Harboe
         Guadalupe Cisneros
 Due Date: 5 / 13 / 19
 Description: This file outlines the requirements for the project. 
+
+What needs to be installed:
+- write everything that needs to be installed here.
 
 The requirements to run the project include: 
         1. Having a terminal window open. 
