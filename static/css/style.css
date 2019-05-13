@@ -49,10 +49,11 @@ header
 
 #body-div{
   background-color: black;
-  position: relative;
+  color: white;
+  position: absolute;
   text-align: center;
   font-family: sans-serif;
-  top-margin: 20vh;
+  top-margin: 35vh;
 }
 
 #contact-foot{
