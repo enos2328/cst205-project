@@ -7,7 +7,7 @@ Name:   Magnus Harboe
 Due Date: 5 / 13 / 19
 Description: This file outlines the requirements for the project. 
 
-What needs to be installed:
+Dependencies needed to run the application:
 - write everything that needs to be installed here.
 
 The requirements to run the project include: 
