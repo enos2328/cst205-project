@@ -5,7 +5,7 @@
 # How to use it:
 ### Step 1: go to requirements.txt to see what you will need to install to run the application.
 ### Step 2: pip install the things you are missing.
-### Step 3: download/clone the porject to your computer.
+### Step 3: download/clone the project to your computer.
 ### Step 4: run API.py in your python interpreter.
 ### Step 5: open your webrowser and type http://127.0.0.1:5000.
 ### Step 6: make yourself a great meal!
