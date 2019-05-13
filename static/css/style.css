@@ -41,6 +41,11 @@ header{
   text-align: center;
 }
 
+.pheader{
+  width: 25%; 
+  margin-left:50px;
+}
+
 .subhead-move {
   top-margin: 0;
 }
