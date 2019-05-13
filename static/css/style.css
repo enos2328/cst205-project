@@ -36,16 +36,6 @@ header
   color: white;
 }
 
-#sub-header{
-/*   height: 30vh;
-  background: url(img/bread-color-copyspace-1565982.jpg);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  overflow: wrap;
-  text-align: center; */
-}
-
 #body-div{
   color: white;
   position: absolute;
@@ -55,18 +45,10 @@ header
 }
 
 #contact-foot{
-/*   height: 20vh;
-  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(img/bread-color-copyspace-1565982.jpg);
+  height: 20vh;
+  background-color: black;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed; */
-}
-
-.contact-body{
-/*   color: white !important;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center; */
 }
 
 .small-text{
