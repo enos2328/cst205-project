@@ -8,7 +8,7 @@ Due Date: 5 / 13 / 19
 Description: This file outlines the requirements for the project. 
 
 Dependencies needed to run the application:
-- write everything that needs to be installed here.
+        ○ Flask, render_template, redirect, url_for, request from flask 
 
 The requirements to run the project include: 
         1. Having a terminal window open. 
