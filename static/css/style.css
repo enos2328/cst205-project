@@ -34,11 +34,11 @@ header{
 /*-----------Changes---------*/
 /*---------------------------*/
 .top-border{
-  border-top: 5px dashed black;
+  border-top: 5px dashed black !important;
 }
 
 .bottom-border{
-  border-bottom: 5px dashed black;
+  border-bottom: 5px dashed black !important;
 }
 
 .subhead-move {
