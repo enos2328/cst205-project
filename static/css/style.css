@@ -29,6 +29,14 @@ header{
   margin: 25px;
 }
 
+
+/*---------------------------*/
+/*-----------Changes---------*/
+/*---------------------------*/
+.top-border{
+  border-top: 2px dashed black;
+}
+
 .subhead-move {
   top-margin: 0;
   color: white;
