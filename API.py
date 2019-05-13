@@ -7,12 +7,11 @@
     Due Date: 5 / 13 / 19
     Description: This program uses the spoonacular api to find recipes that fits what the user have in their fridge.
 """
-from flask import Flask, render_template, flash, redirect, url_for, request
+from flask import Flask, render_template, redirect, url_for, request
 import requests
 import json
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
-from flask_wtf.csrf import CSRFError
 from wtforms import PasswordField, StringField, SelectField, SubmitField
 from wtforms.validators import DataRequired
 
