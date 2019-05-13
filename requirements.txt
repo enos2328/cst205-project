@@ -11,10 +11,7 @@ Dependencies needed to run the application:
         ○ Flask           1.0.2
         ○ Flask-Bootstrap 3.3.7.1
         ○ Flask-WTF       0.14.2
-        ○ requests
-        ○ json
-        ○ Bootstrap from flask_bootstrap
-        ○ FlaskForm from flask_wtf
+        ○ requests        2.21.0
         ○ WTForms         2.2.1
         ○ DataRequired from wtforms.validators
 
