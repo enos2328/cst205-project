@@ -33,12 +33,12 @@ header{
 /*---------------------------*/
 /*-----------Changes---------*/
 /*---------------------------*/
-.top-border{
-  border-top: 5px dashed black !important;
+.border-solid{
+  border: 5px solid black !important;
 }
 
-.bottom-border{
-  border-bottom: 5px dashed black !important;
+.centered{
+  text-align: center;
 }
 
 .subhead-move {
