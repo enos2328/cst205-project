@@ -1,5 +1,5 @@
 /*---------------------------*/
-/*------------Global---------*/
+/*-----------Global----------*/
 /*---------------------------*/
 body{
   margin:0;
@@ -34,12 +34,11 @@ header{
 /*-----------Changes---------*/
 /*---------------------------*/
 .top-border{
-  border-top: 2px dashed black;
+  border-top: 5px dashed black;
 }
 
 .subhead-move {
   top-margin: 0;
-  color: white;
 }
 
 .img-header{
@@ -56,18 +55,10 @@ header{
 }
 
 #body-div{
-  color: white;
   position: absolute;
   text-align: center;
   font-family: sans-serif;
   top-margin: 35vh;
-}
-
-#contact-foot{
-  height: 20vh;
-  background-color: black;
-  background-position: center;
-  background-size: cover;
 }
 
 .small-text{
@@ -78,6 +69,25 @@ header{
   background-color: black !important;
 }
 
+.underline{
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.white{
+  color: white !important;
+}
+
+.font-black{
+  color: black !important;
+}
+
+/*---------------------------*/
+/*-------Don't Change--------*/
+/*---------------------------*/
 .btn.btn1{
   font-size: 18px;
   color: #fff;
@@ -114,21 +124,6 @@ header{
  color: #fff !important;
 }
 
-.underline{
-  text-decoration: underline;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.white{
-  color: white !important;
-}
-
-.font-black{
-  color: black !important;
-}
 
 /*----------------*/
 /*-----NAVBAR-----*/
