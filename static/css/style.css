@@ -35,12 +35,12 @@ header
 
 .subhead-move {
   top-margin: 10px;
+  color: white;
 }
 
 #sub-header{
   height: 30vh;
-/*   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(img/bread-color-copyspace-1565982.jpg); */
-  background-color: black;
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(img/bread-color-copyspace-1565982.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -74,6 +74,10 @@ header
 
 .small-text{
   font-size: 15px !important;
+}
+
+.background-black{
+  background-color: black;
 }
 
 .btn.btn1
