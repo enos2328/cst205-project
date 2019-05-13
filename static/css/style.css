@@ -39,7 +39,8 @@ header
 
 #sub-header{
   height: 30vh;
-  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(img/bread-color-copyspace-1565982.jpg);
+/*   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(img/bread-color-copyspace-1565982.jpg); */
+  background-color: black;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
