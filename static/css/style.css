@@ -39,36 +39,36 @@ header
 }
 
 #sub-header{
-  height: 30vh;
+/*   height: 30vh;
   background: url(img/bread-color-copyspace-1565982.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   overflow: wrap;
-  text-align: center;
+  text-align: center; */
 }
 
 #body-div{
-  color: white;
+/*   color: white;
   position: absolute;
   text-align: center;
   font-family: sans-serif;
-  top-margin: 35vh;
+  top-margin: 35vh; */
 }
 
 #contact-foot{
-  height: 20vh;
+/*   height: 20vh;
   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(img/bread-color-copyspace-1565982.jpg);
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 }
 
 .contact-body{
-  color: white !important;
+/*   color: white !important;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  text-align: center; */
 }
 
 .small-text{
