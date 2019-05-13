@@ -8,13 +8,15 @@ Due Date: 5 / 13 / 19
 Description: This file outlines the requirements for the project. 
 
 Dependencies needed to run the application:
-        ○ Flask, render_template, redirect, url_for, request from flask 
+        ○ Flask           1.0.2
+        ○ Flask-Bootstrap 3.3.7.1
+        ○ Flask-WTF       0.14.2
         ○ requests
         ○ json
         ○ Bootstrap from flask_bootstrap
-        ○ FlaskForm 
-        ○ PasswordField, StringField, SelectField, SubmitField 
-        ○ DataRequired
+        ○ FlaskForm from flask_wtf
+        ○ WTForms         2.2.1
+        ○ DataRequired from wtforms.validators
 
 The requirements to run the project include: 
         1. Having a terminal window open. 
