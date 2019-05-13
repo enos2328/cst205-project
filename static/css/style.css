@@ -119,13 +119,13 @@ body{
  z-index: 2;
 }
 
-.navbar{
+/* .navbar{
   background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.8));
 }
 
 .navbar-brand img{
   height: 50px;
-}
+} */
 
 .nav-bar .fa-bars{
   font-size: 35px;
