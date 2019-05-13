@@ -37,6 +37,10 @@ header{
   border-top: 5px dashed black;
 }
 
+.bottom-border{
+  border-bottom: 5px dashed black;
+}
+
 .subhead-move {
   top-margin: 0;
 }
@@ -52,13 +56,6 @@ header{
 .subhead{
   top-margin: 20px;
   padding: 50px;
-}
-
-#body-div{
-  position: absolute;
-  text-align: center;
-  font-family: sans-serif;
-  top-margin: 35vh;
 }
 
 .small-text{
