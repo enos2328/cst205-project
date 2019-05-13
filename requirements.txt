@@ -1,4 +1,5 @@
 File Name: experiments.txt
+
 Name:   Magnus Harboe
         Athena Enosara
         Andrew Marmolejo
@@ -10,3 +11,6 @@ The requirements to run the project include:
         1. Having a terminal window open. 
         2. Having the enviroment open in your terminal. 
         3. Python to run the flask project API.py
+        4. A web browser to open the project in once your run the flask project.
+        5. Familiarize yourself with the web page. 
+        6. Read the FAQ (if necessary)
