@@ -7,14 +7,14 @@ body{
   font-family: sans-serif;
 }
 
-.header{
+/* .header{
   height: 100vh;
   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(img/bread-color-copyspace-1565982.jpg);
   background-position: center;
   background-size: cover;
   left-margin: -5px;
-  right-margin: -5px;
-}
+  right-margin: -5px; 
+}*/
 
 .welcome{
   position: relative;
