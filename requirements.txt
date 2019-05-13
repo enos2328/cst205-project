@@ -9,6 +9,12 @@ Description: This file outlines the requirements for the project.
 
 Dependencies needed to run the application:
         ○ Flask, render_template, redirect, url_for, request from flask 
+        ○ requests
+        ○ json
+        ○ Bootstrap from flask_bootstrap
+        ○ FlaskForm 
+        ○ PasswordField, StringField, SelectField, SubmitField 
+        ○ DataRequired
 
 The requirements to run the project include: 
         1. Having a terminal window open. 
