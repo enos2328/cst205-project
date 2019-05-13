@@ -61,10 +61,11 @@
             </div>
         </section>
         <div class="container">
-          <!-- TITLE WITH THE USERNAME -->
+                <!-- TITLE WITH THE USERNAME -->
                 <h1>Your Recipes
                     {% print(username.capitalize()) %}
                 </h1>
+           <p>Below is a list of the recipes you have added.</p>
             <ul class="list-group">
                 <!-- PRINTS YOUR RECIPES -->
                 {% for item in accounts %}
