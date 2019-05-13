@@ -32,13 +32,15 @@ body{
 .subhead-move {
   top-margin: 0;
   color: white;
-  width: 50px;
-  font-size: 30px;
-  padding: 10px;
+  background: url(img/bread-color-copyspace-1565982.jpg);
+  background-position: absolute;
+  width: auto;
+  background-size: cover;
 }
 
 .subhead{
   top-margin: 20px;
+  padding: 50px;
 }
 
 #body-div{
